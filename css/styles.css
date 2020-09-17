@@ -71,8 +71,18 @@ body {
   font-weight: 400;
   line-height: 1.7; }
 
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+.u-margin-top-small {
+  margin-top: 1rem; }
+
+.u-margin-top-medium {
+  margin-top: 2.5rem; }
+
 .card {
-  border: solid 1px #000;
+  background: linear-gradient(135deg, white, #fff5f5);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   height: 40rem; }
   .card__left {
     width: 62%;
@@ -82,29 +92,78 @@ body {
     float: left; }
     .card__left .logo-box {
       margin-bottom: 4rem; }
+    .card__left .card__text-box .heading-primary {
+      letter-spacing: 1rem;
+      line-height: 3.5rem;
+      text-transform: uppercase; }
+      .card__left .card__text-box .heading-primary--first {
+        color: #ce9797;
+        font-weight: 200;
+        font-size: 3.5rem; }
+      .card__left .card__text-box .heading-primary--second {
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        display: block; }
+      .card__left .card__text-box .heading-primary--third {
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        display: block; }
+    .card__left .card__text-box .paragraph {
+      width: 65%;
+      letter-spacing: 0rem;
+      font-size: .9rem;
+      color: #ce9797; }
+    .card__left .form {
+      position: relative; }
+      .card__left .form .required {
+        font-size: .8rem;
+        margin-top: 1rem;
+        color: #f96262;
+        margin-left: 1.5rem;
+        visibility: hidden; }
+      .card__left .form .input--email {
+        width: 65%;
+        border-radius: 9999em;
+        height: 3rem;
+        outline: none;
+        border: 1px solid #ce9797;
+        padding: 1.5rem;
+        position: relative;
+        transition: border .5s; }
+        .card__left .form .input--email::placeholder {
+          color: rgba(206, 151, 151, 0.6); }
+        .card__left .form .input--email:invalid {
+          border: 1px solid #f96262;
+          background: url("../../images/icon-error.svg") no-repeat;
+          background-position-x: 75%;
+          background-position-y: 50%; }
+      .card__left .form .input--email:invalid + .required {
+        visibility: visible; }
+      .card__left .form .btn-arrow {
+        position: absolute;
+        top: -6%;
+        right: 35%;
+        border-radius: 9999em;
+        width: 5.5rem;
+        height: 3.5rem;
+        background: linear-gradient(to right bottom, #f8bfbf, #ee8c8c);
+        border: 0px;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 1.5rem 4rem rgba(249, 98, 98, 0.45); }
   .card__right {
     width: 38%;
     background-image: url("../../images/hero-desktop.jpg");
     background-size: cover;
     height: 100%;
     float: right; }
-  .card__text-box {
-    letter-spacing: 1rem;
-    line-height: 3.5rem;
-    text-transform: uppercase; }
-    .card__text-box .heading-primary--first {
-      color: #ce9797;
-      font-weight: lighter;
-      font-size: 3.5rem; }
-    .card__text-box .heading-primary--second {
-      font-family: "Josefin Sans";
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 3.5rem;
-      display: block; }
-    .card__text-box .heading-primary--third {
-      font-family: "Josefin Sans";
-      font-weight: 400;
-      text-transform: uppercase;
-      font-size: 3.5rem;
-      display: block; }
+
+.btn:hover {
+  transform: scale(1.05); }
+
+.btn:active {
+  transform: translateY(0.15rem); }
